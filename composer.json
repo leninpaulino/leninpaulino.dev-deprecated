@@ -12,6 +12,7 @@
         "cnvs/canvas": "^5.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
+        "laravel/telescope": "^2.1",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
         "sentry/sentry-laravel": "1.6.1"
