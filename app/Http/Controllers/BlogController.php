@@ -30,7 +30,7 @@ class BlogController extends Controller
             'tags'   => Tag::all(['name', 'slug']),
         ];
 
-        return view('blog.index', compact('data'));
+        return view('index', compact('data'));
     }
 
     /**
@@ -79,7 +79,7 @@ class BlogController extends Controller
 
             event(new PostViewed($post));
 
-            return view('blog.show', compact('data'));
+            return view('show', compact('data'));
         } else {
             abort(404);
         }
@@ -107,7 +107,7 @@ class BlogController extends Controller
                 })->published()->orderByDesc('published_at')->simplePaginate(10),
             ];
 
-            return view('blog.index', compact('data'));
+            return view('index', compact('data'));
         } else {
             abort(404);
         }
@@ -135,7 +135,7 @@ class BlogController extends Controller
                 })->published()->orderByDesc('published_at')->simplePaginate(10),
             ];
 
-            return view('blog.index', compact('data'));
+            return view('index', compact('data'));
         } else {
             abort(404);
         }
