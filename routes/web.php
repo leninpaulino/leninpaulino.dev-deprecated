@@ -11,20 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'blog', 301);
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('blog')->group(function () {
-    Route::get('/', 'BlogController@getPosts')->name('blog.index');
+    Route::get('/', 'BlogController@getPosts')->name('index');
     Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('{slug}', 'BlogController@findPostBySlug')->name('blog.post');
     Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
     Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
