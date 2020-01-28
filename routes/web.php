@@ -11,7 +11,7 @@
 |
 */
 
-Route::redirect('/', 'blog', 301);
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -21,3 +21,5 @@ Route::prefix('blog')->group(function () {
     Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
     Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
 });
+
+
