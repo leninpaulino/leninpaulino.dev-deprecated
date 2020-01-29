@@ -69463,7 +69463,9 @@ var map = {
 	"./Contact": "./resources/js/Pages/Contact.jsx",
 	"./Contact.jsx": "./resources/js/Pages/Contact.jsx",
 	"./Home": "./resources/js/Pages/Home.jsx",
-	"./Home.jsx": "./resources/js/Pages/Home.jsx"
+	"./Home.jsx": "./resources/js/Pages/Home.jsx",
+	"./Home/FeaturedPost": "./resources/js/Pages/Home/FeaturedPost.jsx",
+	"./Home/FeaturedPost.jsx": "./resources/js/Pages/Home/FeaturedPost.jsx"
 };
 
 
@@ -69675,10 +69677,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Home_FeaturedPost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Home/FeaturedPost */ "./resources/js/Pages/Home/FeaturedPost.jsx");
 
 
-function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome"));
+
+
+function Home(_ref) {
+  var posts = _ref.posts,
+      topics = _ref.topics;
+  var hasPosts = posts.data.length > 0;
+  var hasTopics = topics.length > 0;
+  var containerClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()("container", {
+    "mt-4": hasPosts
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, hasTopics && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "relative z-2 h-10 overflow-hidden py-1 mb-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "flex flex-no-wrap pb-4 -mt-px overflow-x-auto text-center whitespace-no-wrap scrolling-touch justify-between"
+  }, topics.map(function (topic) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "p-2 text-gray-600 no-underline",
+      href: route("blog.topic", topic.slug),
+      key: topic.slug
+    }, topic.name);
+  }))), hasPosts && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home_FeaturedPost__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    post: posts.data.shift()
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+    role: "main",
+    className: containerClasses
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
+  }, hasPosts && posts.data.map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, post.title);
+  }))));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Home/FeaturedPost.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/Pages/Home/FeaturedPost.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FeaturedPost; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function FeaturedPost(_ref) {
+  var post = _ref.post;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mb-8 bg-gray-800 text-white rounded"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-8 px-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "font-italic font-serif"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: route("blog.post", post.slug),
+    className: "text-white text-decoration-none"
+  }, post.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead my-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: route("blog.post", post.slug),
+    className: "text-white text-decoration-none"
+  }, post.summary)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "lead mb-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: route("blog.post", post.slug),
+    className: "text-white font-weight-bold text-decoration-none"
+  }, "Continue reading..."))));
 }
 
 /***/ }),
@@ -69962,8 +70036,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
