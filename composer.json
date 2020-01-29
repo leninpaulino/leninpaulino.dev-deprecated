@@ -16,7 +16,8 @@
         "laravel/telescope": "^2.1",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^1.1",
-        "sentry/sentry-laravel": "1.6.1"
+        "sentry/sentry-laravel": "1.6.1",
+        "tightenco/ziggy": "^0.8.1"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
