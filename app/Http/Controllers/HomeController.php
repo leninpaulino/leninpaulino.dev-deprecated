@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
 
     /**
-     * Show the application dashboard.
+     * Show the application home page.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
@@ -17,5 +17,27 @@ class HomeController extends Controller
     {
         Inertia::setRootView('layouts.inertia');
         return Inertia::render('Home');
+    }
+
+    /**
+     * Show the application about page.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function about()
+    {
+        Inertia::setRootView('layouts.inertia');
+        return Inertia::render('About');
+    }
+
+    /**
+     * Show the application contact.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function contact()
+    {
+        Inertia::setRootView('layouts.inertia');
+        return Inertia::render('Contact');
     }
 }

@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Auth::routes();
 
@@ -21,5 +23,3 @@ Route::prefix('blog')->group(function () {
     Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
     Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
 });
-
-

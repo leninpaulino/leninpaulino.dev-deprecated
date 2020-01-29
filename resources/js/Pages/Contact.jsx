@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "../Shared/Layout";
 
-export default function Home() {
+export default function Contact() {
     return (
         <Layout>
-            <h1>Welcome</h1>
+            <h1>Contact</h1>
         </Layout>
     );
 }

@@ -6456,6 +6456,68 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -69392,6 +69454,14 @@ module.exports = function(module) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./About": "./resources/js/Pages/About.jsx",
+	"./About.jsx": "./resources/js/Pages/About.jsx",
+	"./Blog": "./resources/js/Pages/Blog.jsx",
+	"./Blog.jsx": "./resources/js/Pages/Blog.jsx",
+	"./Blog/Author": "./resources/js/Pages/Blog/Author.jsx",
+	"./Blog/Author.jsx": "./resources/js/Pages/Blog/Author.jsx",
+	"./Contact": "./resources/js/Pages/Contact.jsx",
+	"./Contact.jsx": "./resources/js/Pages/Contact.jsx",
 	"./Home": "./resources/js/Pages/Home.jsx",
 	"./Home.jsx": "./resources/js/Pages/Home.jsx"
 };
@@ -69418,70 +69488,42 @@ webpackContext.id = "./resources/js/Pages sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Home.jsx":
+/***/ "./resources/js/Pages/About.jsx":
+/*!**************************************!*\
+  !*** ./resources/js/Pages/About.jsx ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+
+
+function About() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "About"));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Blog.jsx":
 /*!*************************************!*\
-  !*** ./resources/js/Pages/Home.jsx ***!
+  !*** ./resources/js/Pages/Blog.jsx ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-function Home() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    id: "header",
-    className: "fixed w-full z-10 top-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "progress",
-    className: "h-1 z-20 top-0",
-    style: {
-      background: "linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)"
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pl-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl",
-    href: "#"
-  }, "Minimal Blog")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "block lg:hidden pr-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "nav-toggle",
-    className: "flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "fill-current h-3 w-3",
-    viewBox: "0 0 20 20",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "Menu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20",
-    id: "nav-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "list-reset lg:flex justify-end flex-1 items-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "mr-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block py-2 px-4 text-gray-900 font-bold no-underline",
-    href: "#"
-  }, "Active")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "mr-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4",
-    href: "#"
-  }, "link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "mr-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-2 px-4",
-    href: "#"
-  }, "link")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container w-full md:max-w-3xl mx-auto pt-20"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+function Blog() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "w-full px-4 md:px-6 text-xl text-gray-800 leading-normal",
     style: {
       fontFamily: "Georgia,serif"
@@ -69499,10 +69541,10 @@ function Home() {
     className: "text-sm md:text-base font-normal text-gray-600"
   }, "Published 19 February 2019")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "py-6"
-  }, "\uD83D\uDC4B Welcome fellow ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "\uD83D\uDC4B Welcome fellow", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "text-teal-500 no-underline hover:underline",
     href: "https://www.tailwindcss.com"
-  }, "Tailwind CSS"), " and miminal monochrome blog fan.  This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Tailwind CSS"), " ", "and miminal monochrome blog fan. This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "py-6"
   }, "The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "py-2 font-sans"
@@ -69534,57 +69576,13 @@ function Home() {
     className: "break-words whitespace-pre-wrap"
   }, "<header className=\"site-header outer\"> <div className=\"inner\"> </div> </header>"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-base md:text-sm text-gray-500 px-4 py-6"
-  }, "Tags: ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Tags:", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     className: "text-base md:text-sm text-teal-500 no-underline hover:underline"
-  }, "Link"), " . ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Link"), " ", ".", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     className: "text-base md:text-sm text-teal-500 no-underline hover:underline"
-  }, "Link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-    className: "border-b-2 border-gray-400 mb-8 mx-4"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container px-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "font-sans bg-white rounded-lg shadow-md p-4 text-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "font-bold break-normal text-xl md:text-3xl"
-  }, "Subscribe to my Newsletter"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-bold break-normal font-normal text-gray-600 text-sm md:text-base"
-  }, "Get the latest posts delivered right to your inbox"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full text-center pt-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    action: "#"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "max-w-xl mx-auto p-1 pr-0 flex flex-wrap items-center"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "email",
-    placeholder: "youremail@example.com",
-    className: "flex-1 mt-4 appearance-none border border-gray-400 rounded shadow-md p-3 text-gray-600 mr-2 focus:outline-none"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    type: "submit",
-    className: "flex-1 mt-4 block md:inline-block appearance-none bg-teal-500 text-white text-base font-semibold tracking-wider uppercase py-4 rounded shadow hover:bg-teal-400"
-  }, "Subscribe")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full items-center font-sans px-4 py-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-10 h-10 rounded-full mr-4",
-    src: "http://i.pravatar.cc/300",
-    alt: "Avatar of Author"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex-1 px-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-base font-bold text-base md:text-xl leading-none mb-2"
-  }, "Jo Bloggerson"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-gray-600 text-xs md:text-base"
-  }, "Minimal Blog Tailwind CSS template by ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-teal-500 no-underline hover:underline",
-    href: "https://www.tailwindtoolbox.com"
-  }, "TailwindToolbox.com"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "justify-end"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "bg-transparent border border-gray-500 hover:border-teal-500 text-xs text-gray-500 hover:text-teal-500 font-bold py-2 px-4 rounded-full"
-  }, "Read More"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
-    className: "border-b-2 border-gray-400 mb-8 mx-4"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "font-sans flex justify-between content-center px-4 pb-12"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-left"
@@ -69600,7 +69598,106 @@ function Home() {
   }, "Next Post >"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     className: "break-normal text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
-  }, "Blog title"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+  }, "Blog title")))));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Blog/Author.jsx":
+/*!********************************************!*\
+  !*** ./resources/js/Pages/Blog/Author.jsx ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Author; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Author() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex w-full items-center font-sans px-4 py-12"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "w-10 h-10 rounded-full mr-4",
+    src: "http://i.pravatar.cc/300",
+    alt: "Avatar of Author"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "flex-1 px-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-base font-bold text-base md:text-xl leading-none mb-2"
+  }, "Jo Bloggerson"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-gray-600 text-xs md:text-base"
+  }, "Minimal Blog Tailwind CSS template by", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "text-teal-500 no-underline hover:underline",
+    href: "https://www.tailwindtoolbox.com"
+  }, "TailwindToolbox.com"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "justify-end"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "bg-transparent border border-gray-500 hover:border-teal-500 text-xs text-gray-500 hover:text-teal-500 font-bold py-2 px-4 rounded-full"
+  }, "Read More")));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Contact.jsx":
+/*!****************************************!*\
+  !*** ./resources/js/Pages/Contact.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Contact; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+
+
+function Contact() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact"));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Home.jsx":
+/*!*************************************!*\
+  !*** ./resources/js/Pages/Home.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+
+
+function Home() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Welcome"));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Footer.jsx":
+/*!****************************************!*\
+  !*** ./resources/js/Shared/Footer.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function Footer() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "bg-white border-t border-gray-400 shadow"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container max-w-4xl mx-auto flex py-8"
@@ -69631,7 +69728,132 @@ function Home() {
   }, "Add social link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1",
     href: "#"
-  }, "Add social link")))))))));
+  }, "Add social link"))))))));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/Layout.jsx":
+/*!****************************************!*\
+  !*** ./resources/js/Shared/Layout.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ "./resources/js/Shared/Footer.jsx");
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./resources/js/Shared/NavBar.jsx");
+
+
+
+function Layout(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+    className: "container w-full md:max-w-3xl mx-auto pt-20"
+  }, children), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/NavBar.jsx":
+/*!****************************************!*\
+  !*** ./resources/js/Shared/NavBar.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return NavBar; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _NavBar_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar/Link */ "./resources/js/Shared/NavBar/Link.jsx");
+
+
+function NavBar() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    id: "header",
+    className: "fixed w-full z-10 top-0"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "progress",
+    className: "h-1 z-20 top-0",
+    style: {
+      background: "linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)"
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "pl-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl",
+    href: "#"
+  }, "Lenin Paulino")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "block lg:hidden pr-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    id: "nav-toggle",
+    className: "flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    className: "fill-current h-3 w-3",
+    viewBox: "0 0 20 20",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "Menu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
+  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20",
+    id: "nav-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "list-reset lg:flex justify-end flex-1 items-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Blog",
+    href: "home"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "About",
+    href: "about"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    text: "Contact",
+    href: "contact"
+  })))));
+}
+
+/***/ }),
+
+/***/ "./resources/js/Shared/NavBar/Link.jsx":
+/*!*********************************************!*\
+  !*** ./resources/js/Shared/NavBar/Link.jsx ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Link; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
+/* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function Link(_ref) {
+  var text = _ref.text,
+      href = _ref.href;
+  var isActive = route().current(href + "*");
+  var anchorClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()("inline-block py-2 px-4 no-underline", {
+    "text-gray-900 font-bold": isActive,
+    "text-gray-600 hover:text-gray-900 hover:text-underline": !isActive
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "mr-3"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
+    className: anchorClasses,
+    href: route(href)
+  }, text));
 }
 
 /***/ }),
@@ -69740,8 +69962,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
