@@ -69456,16 +69456,12 @@ module.exports = function(module) {
 var map = {
 	"./About": "./resources/js/Pages/About.jsx",
 	"./About.jsx": "./resources/js/Pages/About.jsx",
-	"./Blog": "./resources/js/Pages/Blog.jsx",
-	"./Blog.jsx": "./resources/js/Pages/Blog.jsx",
-	"./Blog/Author": "./resources/js/Pages/Blog/Author.jsx",
-	"./Blog/Author.jsx": "./resources/js/Pages/Blog/Author.jsx",
-	"./Contact": "./resources/js/Pages/Contact.jsx",
-	"./Contact.jsx": "./resources/js/Pages/Contact.jsx",
 	"./Home": "./resources/js/Pages/Home.jsx",
 	"./Home.jsx": "./resources/js/Pages/Home.jsx",
-	"./Home/FeaturedPost": "./resources/js/Pages/Home/FeaturedPost.jsx",
-	"./Home/FeaturedPost.jsx": "./resources/js/Pages/Home/FeaturedPost.jsx"
+	"./Home/PostItem": "./resources/js/Pages/Home/PostItem.jsx",
+	"./Home/PostItem.jsx": "./resources/js/Pages/Home/PostItem.jsx",
+	"./Post": "./resources/js/Pages/Post.jsx",
+	"./Post.jsx": "./resources/js/Pages/Post.jsx"
 };
 
 
@@ -69506,160 +69502,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "About"));
-}
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Blog.jsx":
-/*!*************************************!*\
-  !*** ./resources/js/Pages/Blog.jsx ***!
-  \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function Blog() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full px-4 md:px-6 text-xl text-gray-800 leading-normal",
-    style: {
-      fontFamily: "Georgia,serif"
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "font-sans"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "text-base md:text-sm text-teal-500 font-bold"
-  }, "<"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
-  }, "BACK TO BLOG"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl"
-  }, "Welcome to Minimal Blog"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-sm md:text-base font-normal text-gray-600"
-  }, "Published 19 February 2019")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "py-6"
-  }, "\uD83D\uDC4B Welcome fellow", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-teal-500 no-underline hover:underline",
-    href: "https://www.tailwindcss.com"
-  }, "Tailwind CSS"), " ", "and miminal monochrome blog fan. This starter template provides a starting point to create your own minimal monochrome blog using Tailwind CSS and vanilla Javascript."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "py-6"
-  }, "The basic blog page layout is available and all using the default Tailwind CSS classes (although there are a few hardcoded style tags). If you are going to use this in your project, you will want to convert the classes into components."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "py-2 font-sans"
-  }, "Heading 1"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "py-2 font-sans"
-  }, "Heading 2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "py-2 font-sans"
-  }, "Heading 3"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-    className: "py-2 font-sans"
-  }, "Heading 4"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-    className: "py-2 font-sans"
-  }, "Heading 5"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h6", {
-    className: "py-2 font-sans"
-  }, "Heading 6"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "py-6"
-  }, "Sed dignissim lectus ut tincidunt vulputate. Fusce tincidunt lacus purus, in mattis tortor sollicitudin pretium. Phasellus at diam posuere, scelerisque nisl sit amet, tincidunt urna. Cras nisi diam, pulvinar ut molestie eget, eleifend ac magna. Sed at lorem condimentum, dignissim lorem eu, blandit massa. Phasellus eleifend turpis vel erat bibendum scelerisque. Maecenas id risus dictum, rhoncus odio vitae, maximus purus. Etiam efficitur dolor in dolor molestie ornare. Aenean pulvinar diam nec neque tincidunt, vitae molestie quam fermentum. Donec ac pretium diam. Suspendisse sed odio risus. Nunc nec luctus nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis nec nulla eget sem dictum elementum."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "py-3"
-  }, "Maecenas accumsan lacus sit amet elementum porta. Aliquam eu libero lectus. Fusce vehicula dictum mi. In non dolor at sem ullamcorper venenatis ut sed dui. Ut ut est quam. Suspendisse quam quam, commodo sit amet placerat in, interdum a ipsum. Morbi sit amet tellus scelerisque tortor semper posuere."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "py-3"
-  }, "Morbi varius posuere blandit. Praesent gravida bibendum neque eget commodo. Duis auctor ornare mauris, eu accumsan odio viverra in. Proin sagittis maximus pharetra. Nullam lorem mauris, faucibus ut odio tempus, ultrices aliquet ex. Nam id quam eget ipsum luctus hendrerit. Ut eros magna, eleifend ac ornare vulputate, pretium nec felis."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "py-3"
-  }, "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc vitae pretium elit. Cras leo mauris, tristique in risus ac, tristique rutrum velit. Mauris accumsan tempor felis vitae gravida. Cras egestas convallis malesuada. Etiam ac ante id tortor vulputate pretium. Maecenas vel sapien suscipit, elementum odio et, consequat tellus.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("blockquote", {
-    className: "border-l-4 border-teal-500 italic my-8 pl-8 md:pl-12"
-  }, "Example of blockquote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo posuere et sit amet ligula."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "py-6"
-  }, "Example code block:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("pre", {
-    className: "bg-gray-900 rounded text-white font-mono text-base p-2 md:p-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("code", {
-    className: "break-words whitespace-pre-wrap"
-  }, "<header className=\"site-header outer\"> <div className=\"inner\"> </div> </header>"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-base md:text-sm text-gray-500 px-4 py-6"
-  }, "Tags:", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-base md:text-sm text-teal-500 no-underline hover:underline"
-  }, "Link"), " ", ".", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "text-base md:text-sm text-teal-500 no-underline hover:underline"
-  }, "Link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "font-sans flex justify-between content-center px-4 pb-12"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-left"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "text-xs md:text-sm font-normal text-gray-600"
-  }, "< Previous Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "break-normal text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
-  }, "Blog title"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "text-right"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "text-xs md:text-sm font-normal text-gray-600"
-  }, "Next Post >"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "break-normal text-base md:text-sm text-teal-500 font-bold no-underline hover:underline"
-  }, "Blog title")))));
-}
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Blog/Author.jsx":
-/*!********************************************!*\
-  !*** ./resources/js/Pages/Blog/Author.jsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Author; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function Author() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full items-center font-sans px-4 py-12"
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "About Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    className: "w-10 h-10 rounded-full mr-4",
-    src: "http://i.pravatar.cc/300",
-    alt: "Avatar of Author"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex-1 px-2"
+    className: "img-fluid rounded-circle",
+    alt: "Profile pic",
+    src: "https://secure.gravatar.com/avatar/1e03fb997d888ed65445176b7428190f?s=300"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-base font-bold text-base md:text-xl leading-none mb-2"
-  }, "Jo Bloggerson"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "text-gray-600 text-xs md:text-base"
-  }, "Minimal Blog Tailwind CSS template by", " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-teal-500 no-underline hover:underline",
-    href: "https://www.tailwindtoolbox.com"
-  }, "TailwindToolbox.com"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "justify-end"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "bg-transparent border border-gray-500 hover:border-teal-500 text-xs text-gray-500 hover:text-teal-500 font-bold py-2 px-4 rounded-full"
-  }, "Read More")));
-}
-
-/***/ }),
-
-/***/ "./resources/js/Pages/Contact.jsx":
-/*!****************************************!*\
-  !*** ./resources/js/Pages/Contact.jsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Contact; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
-
-
-function Contact() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact"));
+    className: "text-justify post"
+  }, "I am a web developer from Dominican Republic, currently working for \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://vivial.net"
+  }, "Vivial"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-justify post"
+  }, "I like to describe myself as a passionate, fast learner software developer who focuses on developing high-quality software products.", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "For years I've been working mostly with backend development, ensuring the persistence and availability of data."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-justify post"
+  }, "I started my career as backend developer many years back, using PHP and Phalcon. Nowadays I still using PHP, but transitioned myself to the awesome Laravel world. For a while now, I've been expanding my skillset, to include technologies like Javascript, React, CSS, etc..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "text-justify post"
+  }, "I'm always open to making new friends, so feel free to email me at\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "mailto:leninpaulinon@gmail.com",
+    target: "_blank"
+  }, "leninpaulinon@gmail.com"), ", and you can also find me on: \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://twitter.com/leninpaulinon"
+  }, "Twitter"), ",\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/leninpaulino"
+  }, "GitHub"), ",\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://linkedin.com/in/leninpaulino"
+  }, "LinkedIn"), ".", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), "You can find a copy of my resum\xE9 \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "/leninpaulino-cv.pdf"
+  }, "here"), ".")));
 }
 
 /***/ }),
@@ -69677,132 +69549,134 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Home_FeaturedPost__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Home/FeaturedPost */ "./resources/js/Pages/Home/FeaturedPost.jsx");
-
+/* harmony import */ var _Home_PostItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home/PostItem */ "./resources/js/Pages/Home/PostItem.jsx");
 
 
 
 function Home(_ref) {
   var posts = _ref.posts,
-      topics = _ref.topics;
+      topics = _ref.topics,
+      tags = _ref.tags;
   var hasPosts = posts.data.length > 0;
   var hasTopics = topics.length > 0;
-  var containerClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()("container", {
-    "mt-4": hasPosts
-  });
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
-  }, hasTopics && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "relative z-2 h-10 overflow-hidden py-1 mb-2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    className: "flex flex-no-wrap pb-4 -mt-px overflow-x-auto text-center whitespace-no-wrap scrolling-touch justify-between"
-  }, topics.map(function (topic) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      className: "p-2 text-gray-600 no-underline",
-      href: route("blog.topic", topic.slug),
-      key: topic.slug
-    }, topic.name);
-  }))), hasPosts && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home_FeaturedPost__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    post: posts.data.shift()
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+  var hasTags = tags.length > 0;
+
+  var renderPosts = function renderPosts() {
+    if (hasPosts) {
+      return posts.data.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home_PostItem__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: post.slug,
+          post: post
+        });
+      });
+    }
+
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I'll start writing soon.");
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     role: "main",
-    className: containerClasses
+    className: "mt-5"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
-  }, hasPosts && posts.data.map(function (post) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, post.title);
-  }))));
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-md-10"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    className: "mb-4 font-italic"
+  }, "Recent Posts"), renderPosts()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("aside", {
+    className: "col-md-2"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "p-md-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "font-italic"
+  }, "Topics"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "list-unstyled mb-0"
+  }, hasTopics && topics.map(function (topic) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: topic.slug
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      className: "text-decoration-none text-secondary",
+      href: route('blog.topic', topic.slug),
+      key: topic.slug
+    }, topic.name));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "p-md-4"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "font-italic"
+  }, "Tags"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    className: "list-unstyled mb-0"
+  }, hasTags && tags.map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: tag.slug
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: route('blog.tag', tag.slug),
+      className: "text-decoration-none text-secondary"
+    }, tag.name));
+  })))))));
 }
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Home/FeaturedPost.jsx":
-/*!**************************************************!*\
-  !*** ./resources/js/Pages/Home/FeaturedPost.jsx ***!
-  \**************************************************/
+/***/ "./resources/js/Pages/Home/PostItem.jsx":
+/*!**********************************************!*\
+  !*** ./resources/js/Pages/Home/PostItem.jsx ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FeaturedPost; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostItem; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-function FeaturedPost(_ref) {
+function PostItem(_ref) {
   var post = _ref.post;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "mb-8 bg-gray-800 text-white rounded"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-8 px-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    className: "font-italic font-serif"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: route("blog.post", post.slug),
-    className: "text-white text-decoration-none"
+    className: "mb-5"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "font-serif text-dark text-decoration-none",
+    href: route('posts.show', post.slug)
   }, post.title)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "lead my-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: route("blog.post", post.slug),
-    className: "text-white text-decoration-none"
-  }, post.summary)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "lead mb-0"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: route("blog.post", post.slug),
-    className: "text-white font-weight-bold text-decoration-none"
-  }, "Continue reading..."))));
+    className: "text-muted mb-2"
+  }, post.published_at, " \u2014 ", post.read_time), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "text-dark text-decoration-none",
+    href: route('posts.show', post.slug)
+  }, post.summary)));
 }
 
 /***/ }),
 
-/***/ "./resources/js/Shared/Footer.jsx":
-/*!****************************************!*\
-  !*** ./resources/js/Shared/Footer.jsx ***!
-  \****************************************/
+/***/ "./resources/js/Pages/Post.jsx":
+/*!*************************************!*\
+  !*** ./resources/js/Pages/Post.jsx ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Post; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Shared_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Shared/Layout */ "./resources/js/Shared/Layout.jsx");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
 
-function Footer() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-    className: "bg-white border-t border-gray-400 shadow"
+
+
+function Post(_ref) {
+  var post = _ref.post;
+  var titleClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()('text-dark font-serif pt-5 mb-4', {
+    'mb-4': !!post.summary
+  });
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Shared_Layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row justify-content-md-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container max-w-4xl mx-auto flex py-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full mx-auto flex flex-wrap"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full md:w-1/2 "
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-bold text-gray-900"
-  }, "About"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "py-4 text-gray-600 text-sm"
-  }, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "flex w-full md:w-1/2"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "px-8"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-bold text-gray-900"
-  }, "Social"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "list-reset items-center text-sm pt-3"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1",
-    href: "#"
-  }, "Add social link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1",
-    href: "#"
-  }, "Add social link")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "inline-block text-gray-600 no-underline hover:text-gray-900 hover:text-underline py-1",
-    href: "#"
-  }, "Add social link"))))))));
+    className: "col col-lg-8"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: titleClasses
+  }, post.title))));
 }
 
 /***/ }),
@@ -69819,16 +69693,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer */ "./resources/js/Shared/Footer.jsx");
-/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./NavBar */ "./resources/js/Shared/NavBar.jsx");
-
+/* harmony import */ var _NavBar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NavBar */ "./resources/js/Shared/NavBar.jsx");
 
 
 function Layout(_ref) {
   var children = _ref.children;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
-    className: "container w-full md:max-w-3xl mx-auto pt-20"
-  }, children), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar__WEBPACK_IMPORTED_MODULE_1__["default"], null), children);
 }
 
 /***/ }),
@@ -69849,48 +69721,65 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function NavBar() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-    id: "header",
-    className: "fixed w-full z-10 top-0"
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+    className: "blog-header py-3"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "progress",
-    className: "h-1 z-20 top-0",
-    style: {
-      background: "linear-gradient(to right, #4dc0b5 var(--scroll), transparent 0)"
-    }
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full md:max-w-4xl mx-auto flex flex-wrap items-center justify-between mt-0 py-3"
+    className: "row flex-nowrap justify-content-between align-items-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "pl-4"
+    className: "col-8"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl",
-    href: "#"
-  }, "Lenin Paulino")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "block lg:hidden pr-4"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    id: "nav-toggle",
-    className: "flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    className: "fill-current h-3 w-3",
-    viewBox: "0 0 20 20",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", null, "Menu"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-gray-100 md:bg-transparent z-20",
-    id: "nav-content"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "list-reset lg:flex justify-end flex-1 items-center"
+    id: "brand",
+    className: "text-dark font-weight-bold text-decoration-none",
+    href: route('blog.index')
+  }, "Lenin Paulino")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "col-4 d-flex justify-content-between align-items-center list-inline"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    text: "Blog",
-    href: "home"
+    href: "home",
+    text: "Blog"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    text: "About",
-    href: "about"
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_NavBar_Link__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    text: "Contact",
-    href: "contact"
-  })))));
+    href: "about",
+    text: "About"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://twitter.com/leninpaulinon",
+    className: "text-decoration-none",
+    target: "_blank",
+    rel: "noopener"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    viewBox: "0 0 24 20"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M21.173 3.162A5.038 5.038 0 0023.338.37a9.698 9.698 0 01-3.129 1.223A4.856 4.856 0 0016.616 0c-2.718 0-4.922 2.26-4.922 5.049 0 .396.042.78.126 1.15C7.728 5.988 4.1 3.979 1.67.922a5.14 5.14 0 00-.666 2.54c0 1.751.87 3.297 2.19 4.203a4.834 4.834 0 01-2.23-.63v.062c0 2.447 1.697 4.488 3.951 4.95a4.695 4.695 0 01-1.297.178c-.317 0-.627-.03-.927-.09.626 2.006 2.444 3.466 4.599 3.505A9.722 9.722 0 010 17.733 13.71 13.71 0 007.548 20c9.058 0 14.01-7.692 14.01-14.365 0-.22-.005-.439-.013-.654A10.1 10.1 0 0024 2.368a9.617 9.617 0 01-2.827.794z",
+    fill: "#A0AEBF",
+    fillRule: "evenodd"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://github.com/leninpaulino",
+    className: "text-decoration-none",
+    target: "_blank",
+    rel: "noopener"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    viewBox: "0 0 24 24"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M0 12.305c0 5.435 3.438 10.047 8.207 11.674.6.113.82-.267.82-.593 0-.292-.011-1.066-.017-2.093-3.339.744-4.043-1.65-4.043-1.65-.545-1.42-1.332-1.798-1.332-1.798-1.09-.764.083-.749.083-.749 1.203.087 1.837 1.268 1.837 1.268 1.071 1.88 2.809 1.338 3.493 1.022.109-.795.42-1.337.762-1.645-2.665-.31-5.466-1.365-5.466-6.08 0-1.343.467-2.442 1.235-3.302-.123-.311-.535-1.562.117-3.256 0 0 1.008-.33 3.3 1.261a11.241 11.241 0 013.005-.414c1.019.005 2.046.141 3.004.414 2.29-1.592 3.297-1.261 3.297-1.261.654 1.694.242 2.945.119 3.256.77.86 1.234 1.959 1.234 3.302 0 4.726-2.806 5.767-5.48 6.071.431.38.815 1.13.815 2.279 0 1.645-.015 2.971-.015 3.375 0 .329.216.712.825.591 4.765-1.63 8.2-6.239 8.2-11.672C24 5.508 18.627 0 12 0S0 5.508 0 12.305z",
+    fill: "#A0AEBF",
+    fillRule: "evenodd"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://linkedin.com/in/leninpaulino",
+    className: "text-decoration-none",
+    target: "_blank",
+    rel: "noopener"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z",
+    fill: "#A0AEBF",
+    fillRule: "evenodd"
+  }))))));
 }
 
 /***/ }),
@@ -69916,18 +69805,19 @@ __webpack_require__.r(__webpack_exports__);
 
 function Link(_ref) {
   var text = _ref.text,
-      href = _ref.href;
-  var isActive = route().current(href + "*");
-  var anchorClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()("inline-block py-2 px-4 no-underline", {
-    "text-gray-900 font-bold": isActive,
-    "text-gray-600 hover:text-gray-900 hover:text-underline": !isActive
+      href = _ref.href,
+      children = _ref.children;
+  var isActive = route().current(href + '*');
+  var anchorClasses = classnames__WEBPACK_IMPORTED_MODULE_2___default()('text-decoration-none', {
+    'font-weight-bold text-dark': isActive,
+    'text-muted': !isActive
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "mr-3"
+    className: "list-inline-item"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_1__["InertiaLink"], {
     className: anchorClasses,
     href: route(href)
-  }, text));
+  }, text, children));
 }
 
 /***/ }),
@@ -70036,8 +69926,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/lenin/code/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/lenin/Sites/leninpaulino.dev/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -12,12 +12,11 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+import { InertiaApp } from '@inertiajs/inertia-react';
+import React from 'react';
+import { render } from 'react-dom';
 
-import { InertiaApp } from '@inertiajs/inertia-react'
-import React from 'react'
-import { render } from 'react-dom'
-
-const app = document.getElementById('app')
+const app = document.getElementById('app');
 
 render(
   <InertiaApp
@@ -25,4 +24,4 @@ render(
     resolveComponent={name => require(`./Pages/${name}`).default}
   />,
   app
-)
+);

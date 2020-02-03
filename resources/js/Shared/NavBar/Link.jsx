@@ -1,20 +1,21 @@
-import React from "react";
-import { InertiaLink } from "@inertiajs/inertia-react";
-import classNames from "classnames";
+import React from 'react';
+import { InertiaLink } from '@inertiajs/inertia-react';
+import classNames from 'classnames';
 
-export default function Link({ text, href }) {
-    const isActive = route().current(href + "*");
+export default function Link({ text, href, children }) {
+  const isActive = route().current(href + '*');
 
-    const anchorClasses = classNames("inline-block py-2 px-4 no-underline", {
-        "text-gray-900 font-bold": isActive,
-        "text-gray-600 hover:text-gray-900 hover:text-underline": !isActive
-    });
+  const anchorClasses = classNames('text-decoration-none', {
+    'font-weight-bold text-dark': isActive,
+    'text-muted': !isActive
+  });
 
-    return (
-        <li className="mr-3">
-            <InertiaLink className={anchorClasses} href={route(href)}>
-                {text}
-            </InertiaLink>
-        </li>
-    );
+  return (
+    <li className="list-inline-item">
+      <InertiaLink className={anchorClasses} href={route(href)}>
+        {text}
+        {children}
+      </InertiaLink>
+    </li>
+  );
 }

@@ -1,41 +1,65 @@
-import React from "react";
-import Layout from "../Shared/Layout";
-import classNames from "classnames";
-import FeaturedPost from "./Home/FeaturedPost";
+import React from 'react';
+import Layout from '../Shared/Layout';
+import PostItem from './Home/PostItem';
 
-export default function Home({ posts, topics }) {
-    const hasPosts = posts.data.length > 0;
-    const hasTopics = topics.length > 0;
-    const containerClasses = classNames("container", {
-        "mt-4": hasPosts
-    });
+export default function Home({ posts, topics, tags }) {
+  const hasPosts = posts.data.length > 0;
+  const hasTopics = topics.length > 0;
+  const hasTags = tags.length > 0;
 
-    return (
-        <Layout>
-            <div className="container">
-                {hasTopics && (
-                    <div className="relative z-2 h-10 overflow-hidden py-1 mb-2">
-                        <nav className="flex flex-no-wrap pb-4 -mt-px overflow-x-auto text-center whitespace-no-wrap scrolling-touch justify-between">
-                            {topics.map(topic => (
-                                <a
-                                    className="p-2 text-gray-600 no-underline"
-                                    href={route("blog.topic", topic.slug)}
-                                    key={topic.slug}
-                                >
-                                    {topic.name}
-                                </a>
-                            ))}
-                        </nav>
-                    </div>
-                )}
-                {hasPosts && <FeaturedPost post={posts.data.shift()} />}
+  const renderPosts = () => {
+    if (hasPosts) {
+      return posts.data.map(post => <PostItem key={post.slug} post={post} />);
+    }
+
+    return <p>I'll start writing soon.</p>;
+  };
+
+  return (
+    <Layout>
+      <main role="main" className="mt-5">
+        <div className="row">
+          <div className="col-md-10">
+            <h3 className="mb-4 font-italic">Recent Posts</h3>
+            {renderPosts()}
+          </div>
+          <aside className="col-md-2">
+            <div className="p-md-4">
+              <h4 className="font-italic">Topics</h4>
+              <ol className="list-unstyled mb-0">
+                {hasTopics &&
+                  topics.map(topic => (
+                    <li key={topic.slug}>
+                      <a
+                        className="text-decoration-none text-secondary"
+                        href={route('blog.topic', topic.slug)}
+                        key={topic.slug}
+                      >
+                        {topic.name}
+                      </a>
+                    </li>
+                  ))}
+              </ol>
             </div>
-
-            <main role="main" className={containerClasses}>
-                <div className="row">
-                    {hasPosts && posts.data.map(post => <h1>{post.title}</h1>)}
-                </div>
-            </main>
-        </Layout>
-    );
+            <div className="p-md-4">
+              <h4 className="font-italic">Tags</h4>
+              <ol className="list-unstyled mb-0">
+                {hasTags &&
+                  tags.map(tag => (
+                    <li key={tag.slug}>
+                      <a
+                        href={route('blog.tag', tag.slug)}
+                        className="text-decoration-none text-secondary"
+                      >
+                        {tag.name}
+                      </a>
+                    </li>
+                  ))}
+              </ol>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </Layout>
+  );
 }
