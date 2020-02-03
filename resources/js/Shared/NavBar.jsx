@@ -9,7 +9,7 @@ export default function NavBar() {
           <a
             id="brand"
             className="text-dark font-weight-bold text-decoration-none"
-            href={route('blog.index')}
+            href={route('home')}
           >
             Lenin Paulino
           </a>
