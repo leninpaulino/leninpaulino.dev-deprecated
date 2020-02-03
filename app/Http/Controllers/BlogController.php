@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Canvas\Tag;
+use Canvas\Events\PostViewed;
 use Canvas\Post;
+use Canvas\Tag;
 use Canvas\Topic;
 use Canvas\UserMeta;
-use Illuminate\View\View;
-use Illuminate\Support\Str;
-use Canvas\Events\PostViewed;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
+use Illuminate\View\View;
 
 class BlogController extends Controller
 {
@@ -24,13 +24,13 @@ class BlogController extends Controller
         $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
 
         $data = [
-            'avatar' => optional($metaData)->avatar && !empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+            'avatar' => optional($metaData)->avatar && ! empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
             'posts'  => Post::published()->orderByDesc('published_at')->simplePaginate(10),
             'topics' => Topic::all(['name', 'slug']),
             'tags'   => Tag::all(['name', 'slug']),
         ];
 
-        return view('index', compact('data'));
+        return view('blog.index', compact('data'));
     }
 
     /**
@@ -68,7 +68,7 @@ class BlogController extends Controller
             $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
 
             $data = [
-                'avatar' => optional($metaData)->avatar && !empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+                'avatar' => optional($metaData)->avatar && ! empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
                 'author' => $post->user,
                 'post'   => $post,
                 'meta'   => $post->meta,
@@ -79,7 +79,7 @@ class BlogController extends Controller
 
             event(new PostViewed($post));
 
-            return view('show', compact('data'));
+            return view('blog.show', compact('data'));
         } else {
             abort(404);
         }
@@ -98,7 +98,7 @@ class BlogController extends Controller
             $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
 
             $data = [
-                'avatar' => optional($metaData)->avatar && !empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+                'avatar' => optional($metaData)->avatar && ! empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
                 'tag'    => Tag::with('posts')->where('slug', $slug)->first(),
                 'tags'   => Tag::all(['name', 'slug']),
                 'topics' => Topic::all(['name', 'slug']),
@@ -107,7 +107,7 @@ class BlogController extends Controller
                 })->published()->orderByDesc('published_at')->simplePaginate(10),
             ];
 
-            return view('index', compact('data'));
+            return view('blog.index', compact('data'));
         } else {
             abort(404);
         }
@@ -126,7 +126,7 @@ class BlogController extends Controller
             $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
 
             $data = [
-                'avatar' => optional($metaData)->avatar && !empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+                'avatar' => optional($metaData)->avatar && ! empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
                 'tags'   => Tag::all(['name', 'slug']),
                 'topics' => Topic::all(['name', 'slug']),
                 'topic'  => Topic::with('posts')->where('slug', $slug)->first(),
@@ -135,7 +135,7 @@ class BlogController extends Controller
                 })->published()->orderByDesc('published_at')->simplePaginate(10),
             ];
 
-            return view('index', compact('data'));
+            return view('blog.index', compact('data'));
         } else {
             abort(404);
         }
