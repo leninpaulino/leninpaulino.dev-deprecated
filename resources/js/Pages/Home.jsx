@@ -1,8 +1,15 @@
 import React from 'react';
 import Layout from '../Shared/Layout';
 import PostItem from './Home/PostItem';
+import { InertiaLink } from '@inertiajs/inertia-react';
 
-export default function Home({ posts, topics, tags }) {
+export default function Home({
+  posts,
+  topics,
+  tags,
+  tag: filteredTag,
+  topic: filteredTopic
+}) {
   const hasPosts = posts.data.length > 0;
   const hasTopics = topics.length > 0;
   const hasTags = tags.length > 0;
@@ -30,13 +37,17 @@ export default function Home({ posts, topics, tags }) {
                 {hasTopics &&
                   topics.map(topic => (
                     <li key={topic.slug}>
-                      <a
+                      <InertiaLink
                         className="text-decoration-none text-secondary"
-                        href={route('blog.topic', topic.slug)}
+                        href={route('posts.topic', topic.slug)}
                         key={topic.slug}
                       >
-                        {topic.name}
-                      </a>
+                        {filteredTopic && filteredTopic.slug === topic.slug ? (
+                          <strong>{topic.name}</strong>
+                        ) : (
+                          topic.name
+                        )}
+                      </InertiaLink>
                     </li>
                   ))}
               </ol>
@@ -47,12 +58,16 @@ export default function Home({ posts, topics, tags }) {
                 {hasTags &&
                   tags.map(tag => (
                     <li key={tag.slug}>
-                      <a
-                        href={route('blog.tag', tag.slug)}
+                      <InertiaLink
+                        href={route('posts.tag', tag.slug)}
                         className="text-decoration-none text-secondary"
                       >
-                        {tag.name}
-                      </a>
+                        {filteredTag && filteredTag.slug === tag.slug ? (
+                          <strong>{tag.name}</strong>
+                        ) : (
+                          tag.name
+                        )}
+                      </InertiaLink>
                     </li>
                   ))}
               </ol>
