@@ -85,11 +85,10 @@ class HomeController extends Controller
                 $readRandom = $randomPool->random();
             }
 
-            $metaData = UserMeta::forCurrentUser()->first();
-            $emailHash = md5(trim(Str::lower(optional(request()->user())->email)));
+            $emailHash = md5(trim(Str::lower(optional($post->user)->email)));
 
             $data = [
-                'avatar' => optional($metaData)->avatar && ! empty(optional($metaData)->avatar) ? $metaData->avatar : "https://secure.gravatar.com/avatar/{$emailHash}?s=500",
+                'avatar' => "https://secure.gravatar.com/avatar/{$emailHash}?s=200",
                 'author' => $post->user,
                 'post'   => $post,
                 'meta'   => $post->meta,
@@ -101,6 +100,54 @@ class HomeController extends Controller
             event(new PostViewed($post));
 
             return Inertia::render('Post', $data);
+        } else {
+            abort(404);
+        }
+    }
+
+    /**
+     * Show all posts given a tag.
+     *
+     * @param string $slug
+     * @return \Illuminate\View\View
+     */
+    public function getPostsByTag(string $slug)
+    {
+        if (Tag::where('slug', $slug)->first()) {
+            $data = [
+                'tag'    => Tag::with('posts')->where('slug', $slug)->first(),
+                'tags'   => Tag::all(['name', 'slug']),
+                'topics' => Topic::all(['name', 'slug']),
+                'posts'  => Post::whereHas('tags', function ($query) use ($slug) {
+                    $query->where('slug', $slug);
+                })->published()->orderByDesc('published_at')->simplePaginate(10),
+            ];
+
+            return Inertia::render('Home', $data);
+        } else {
+            abort(404);
+        }
+    }
+
+    /**
+     * Show all posts given a topic.
+     *
+     * @param string $slug
+     * @return \Illuminate\View\View
+     */
+    public function getPostsByTopic(string $slug)
+    {
+        if (Topic::where('slug', $slug)->first()) {
+            $data = [
+                'tags'   => Tag::all(['name', 'slug']),
+                'topics' => Topic::all(['name', 'slug']),
+                'topic'  => Topic::with('posts')->where('slug', $slug)->first(),
+                'posts'  => Post::whereHas('topic', function ($query) use ($slug) {
+                    $query->where('slug', $slug);
+                })->published()->orderByDesc('published_at')->simplePaginate(10),
+            ];
+
+            return Inertia::render('Home', $data);
         } else {
             abort(404);
         }

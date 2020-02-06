@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 export default function PostItem({ post }) {
   return (
@@ -12,7 +13,7 @@ export default function PostItem({ post }) {
         </a>
       </h3>
       <p className="text-muted mb-2">
-        {post.published_at} — {post.read_time}
+        {moment(post.published_at).format('MMM DD')} — {post.read_time}
       </p>
       <p>
         <a

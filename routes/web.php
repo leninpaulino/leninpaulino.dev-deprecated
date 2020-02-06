@@ -14,17 +14,10 @@
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/contact', 'HomeController@contact')->name('contact');
-Route::prefix('posts')->group(function () {
-    Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('{slug}', 'HomeController@findPostBySlug')->name('posts.show');
-    Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
-    Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
+Route::prefix('posts')->name('posts.')->group(function () {
+    Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('{slug}', 'HomeController@findPostBySlug')->name('show');
+    Route::get('tag/{slug}', 'HomeController@getPostsByTag')->name('tag');
+    Route::get('topic/{slug}', 'HomeController@getPostsByTopic')->name('topic');
 });
 
-Auth::routes();
-
-Route::prefix('blog')->group(function () {
-    Route::get('/', 'BlogController@getPosts')->name('blog.index');
-    Route::middleware('Canvas\Http\Middleware\ViewThrottle')->get('{slug}', 'BlogController@findPostBySlug')->name('blog.post');
-    Route::get('tag/{slug}', 'BlogController@getPostsByTag')->name('blog.tag');
-    Route::get('topic/{slug}', 'BlogController@getPostsByTopic')->name('blog.topic');
-});
+Auth::routes(['register' => false]);
