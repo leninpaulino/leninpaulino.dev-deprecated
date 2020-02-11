@@ -5,14 +5,13 @@ import classNames from 'classnames';
 export default function Link({ text, href, children }) {
   const isActive = route().current(href + '*');
 
-  const anchorClasses = classNames('text-decoration-none', {
-    'font-weight-bold text-dark': isActive,
-    'text-muted': !isActive
+  const navItemClasses = classNames('nav-item', {
+    active: isActive
   });
 
   return (
-    <li className="list-inline-item">
-      <InertiaLink className={anchorClasses} href={route(href)}>
+    <li className={navItemClasses}>
+      <InertiaLink className="nav-link" href={route(href)}>
         {text}
         {children}
       </InertiaLink>
